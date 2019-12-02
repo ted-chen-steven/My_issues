@@ -1,0 +1,30 @@
+#include<iostream>
+#include<string>
+#include<vector>
+#include<algorithm>
+
+using namespace std;
+
+int main() {
+
+	string str;
+	string str1 = "PATest";
+	cin >> str;
+	vector<char> hash(256,0);
+	for (auto v : str) {
+		if (str1.find(v) != string::npos)
+			hash[v]++;
+	};
+	int maxx = *max_element(hash.begin(), hash.end());
+	while (maxx-- > 0) {
+		for (auto v : str1) {
+			if (hash[v] > 0) {
+				cout << v;
+				hash[v]--;
+			}
+		};
+	};
+	
+	return 0;
+
+};
