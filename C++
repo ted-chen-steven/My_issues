@@ -2,3 +2,7 @@
    sort(c.rbegin(), c.rend()) 
    instead
    sort(c.begin(), c.end(), cmp)
+2. Iteration with Pointers of map
+   for (auto p = map.begin(); p < map.end(); p++);
+   instead
+   while(p++ != map.end());
