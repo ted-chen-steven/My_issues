@@ -1,3 +1,4 @@
-1. sort(c.rbegin(), c.rend()) 
+1. descending sort 
+   sort(c.rbegin(), c.rend()) 
    instead
    sort(c.begin(), c.end(), cmp)
